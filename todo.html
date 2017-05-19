@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List</title>
+</head>
+<body>
+<form method="post" action="add">
+    Task:<input name="task">
+    <input type="submit" value="add">
+</form>
+<ol>
+    <#list tasks as task>
+        <form method="post" action="delete">
+            ${task.taskName}
+            <input type="submit" value="удалить">
+            <input name="id" type="hidden" value="${task.id}">
+            <img src ="pic.png">
+        </form>
+    </#list>
+    <!--<li>Wake up</li>-->
+    <!--<li>Take over the world</li>-->
+</ol>
+</body>
+</html>
